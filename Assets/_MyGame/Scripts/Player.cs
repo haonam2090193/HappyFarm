@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class Player : MonoBehaviour
 {
     Rigidbody2D rigidbody2d;
     [SerializeField] float speed = 2f;
@@ -43,6 +43,6 @@ public class Movement : MonoBehaviour
 
     private void Move()
     {
-        rigidbody2d.velocity = motionVector * speed;
+        rigidbody2d.velocity = motionVector.normalized * speed;
     }
 }
