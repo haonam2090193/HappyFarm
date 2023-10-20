@@ -8,7 +8,7 @@ public class PickUpItem : MonoBehaviour
     [SerializeField] float speed = 5f;
     [SerializeField] float pickUpDistance = 1.5f;
     [SerializeField] float ttl = 30f;
-    int totalLog = 0;
+    //int totalLog = 0;
 
     private void Awake()
     {
@@ -25,13 +25,12 @@ public class PickUpItem : MonoBehaviour
         if(distance > pickUpDistance)
         {
             return;
-        }
+        }       
         transform.position = Vector3.MoveTowards(transform.position,player.position,speed * Time.deltaTime);
-        
-        if(distance < 0.1f)
+        if (distance < 0.1f)
         {
-            totalLog += 1;
-            Debug.Log("Total Logs : "+ totalLog);
+            
+            Debug.Log("Pickup");
             Destroy(gameObject);
         }
     }

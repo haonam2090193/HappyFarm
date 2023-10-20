@@ -5,7 +5,8 @@ public class Player : MonoBehaviour
     Rigidbody2D rigidbody2d;
     [SerializeField] float speed = 2f;
     Vector2 motionVector;
-    public Vector2 lastMotionVector; Animator animator;
+    public Vector2 lastMotionVector;
+    Animator animator;
     public bool moving;
 
     private void Awake()
